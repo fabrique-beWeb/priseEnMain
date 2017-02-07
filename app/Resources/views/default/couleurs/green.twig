@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %} {% block body %}
+    <body class="green">{% block nav %}
+        {#Grace a parent() on met le contenu du bloc nav 
+        qui est dans base.html.twig #}
+        {{parent()}}
+    {% endblock %}  </body>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="./css/style.css" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    
+    {% block body %}
+        <body>
+            {# On cree un block Nav qui est rappelé dans nos autre pages#}
+            {% block nav %}
+                <nav>
+                    <ul>
+                        {# On link gràce au path(name)la route #}
+                        <li><a href="{{path('r')}}">Red</a></li>
+                        <li><a href="{{path('b')}}">Blue</a></li>
+                        <li><a href="{{path('y')}}">Yellow</a></li>
+                        <li><a href="{{path('g')}}">Green</a></li>
+                    </ul>
+                </nav>
+            {% endblock %}
+        </body>
+    {% endblock %}
+{% block javascripts %}{% endblock %}
+
+</html>
